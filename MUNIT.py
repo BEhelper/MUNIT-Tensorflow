@@ -4,6 +4,8 @@ from glob import glob
 import time
 from tensorflow.contrib.data import batch_and_drop_remainder
 
+# from browser
+
 class MUNIT(object) :
     def __init__(self, sess, args):
         self.model_name = 'MUNIT'
