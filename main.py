@@ -2,6 +2,8 @@ from MUNIT import MUNIT
 import argparse
 from utils import *
 
+
+#desktop
 """parsing and configuration"""
 def parse_args():
     desc = "Tensorflow implementation of MUNIT"
