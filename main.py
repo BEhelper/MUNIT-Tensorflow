@@ -13,6 +13,10 @@ from utils import *
 
 #python main.py --phase train --dataset mydata --batch_size 1
 
+# f---- run --gpu  --data myusrname/projects/p2per/113/output:/model  --data myusrname/datasets/1129pro2psidebyside/1:/my_data --env tensorflow-1.0 'cp /model/* /output; python main.py --phase train --output_dir /output --dataset /my_data'
+
+# f---- run --gpu --data myusrname/datasets/----------/---:/my_data --env tensorflow-1.4 'cp /model/* /output; python main.py --phase train --output_dir /output --dataset /my_data'
+
 
 """parsing and configuration"""
 def parse_args():
