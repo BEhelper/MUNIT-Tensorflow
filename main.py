@@ -4,18 +4,28 @@ from utils import *
 
 
 #desktop
+# file name shorter
+# is it just for gpu
+# dataset folder!
+# image size (for sure not sidebyside?)
+# tensorflow or python version
+
+
+#python main.py --phase train --dataset mydata --batch_size 1
+
+
 """parsing and configuration"""
 def parse_args():
     desc = "Tensorflow implementation of MUNIT"
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument('--phase', type=str, default='train', help='train or test or guide')
-    parser.add_argument('--dataset', type=str, default='summer2winter', help='dataset_name')
+    parser.add_argument('--dataset', type=str, default='mydata', help='dataset_name') # was: winter2summer
 
-    parser.add_argument('--epoch', type=int, default=10, help='The number of epochs to run')
-    parser.add_argument('--iteration', type=int, default=100000, help='The number of training iterations')
+    parser.add_argument('--epoch', type=int, default=2, help='The number of epochs to run')
+    parser.add_argument('--iteration', type=int, default=5000, help='The number of training iterations') #100000
     parser.add_argument('--batch_size', type=int, default=1, help='The batch size')
-    parser.add_argument('--print_freq', type=int, default=1000, help='The number of image_print_freq')
-    parser.add_argument('--save_freq', type=int, default=1000, help='The number of ckpt_save_freq')
+    parser.add_argument('--print_freq', type=int, default=50, help='The number of image_print_freq')
+    parser.add_argument('--save_freq', type=int, default=50, help='The number of ckpt_save_freq')
     parser.add_argument('--num_style', type=int, default=3, help='number of styles to sample')
     parser.add_argument('--direction', type=str, default='a2b', help='direction of style guided image translation')
     parser.add_argument('--guide_img', type=str, default='guide.jpg', help='Style guided image translation')
@@ -38,7 +48,7 @@ def parse_args():
     parser.add_argument('--n_dis', type=int, default=4, help='number of discriminator layer')
     parser.add_argument('--n_scale', type=int, default=3, help='number of scales')
 
-    parser.add_argument('--img_size', type=int, default=256, help='The size of image')
+    parser.add_argument('--img_size', type=int, default=256, help='The size of image') #256
     parser.add_argument('--img_ch', type=int, default=3, help='The size of image channel')
 
     parser.add_argument('--checkpoint_dir', type=str, default='checkpoint',
